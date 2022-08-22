@@ -59,6 +59,14 @@ function setInnerText(id, innerText){
     getId.innerText = innerText;
 }
 
+// function no-5: get innertext to number
+function getInnerTextToNumber(id){
+    const getId = document.getElementById(id);
+    const getInnerText = getId.innerText;
+    const convartNumber = parseFloat(getInnerText);
+    return convartNumber;
+}
+
 document.getElementById('submit1').addEventListener('click', function(){
 
     clickBtn('player-1', 'setInnerHtml');
@@ -143,21 +151,27 @@ document.getElementById('calculate-total').addEventListener('click', function(){
     const inputId2 = document.getElementById('input2');
     const inputId3 = document.getElementById('input3');
     const getValueInput2 = inputId2.value;
-    const getValueInput3 = inputId3.value;
+    const getValueInput3 = inputId3.value; 
+    const inputNumber1        = getInnerTextToNumber('player-total');
+    const convartInputNumber2 = parseFloat(getValueInput2);
+    const convartInputNumber3 = parseFloat(getValueInput3);
     // get child html
     const parentNodeId = document.getElementById('setInnerHtml');
     const countChild = parentNodeId.childNodes;
     const childNumber = countChild.length - 1;
-
-    if(childNumber <= 0 || getValueInput2 === "" || getValueInput3 === ""){
+   
+    //Validation  
+    if(childNumber <= 0 || inputNumber1 === 0){
         alert("Select Your favorite player. Then calculate the total money");
+    }else if(getValueInput2 === "" || getValueInput3 === ""){
+       alert("Type money");
+    
     }else{
-        const convartInputNumber2 = parseFloat(getValueInput2);
-        const convartInputNumber3 = parseFloat(getValueInput3);
-        const totalMoney = convartNumber * childNumber;
-        setInnerText('player-total', moneyTotalPlayer)
-        console.log(moneyTotalPlayer);
-        inputId2.value = "";
+        const totalCostes = inputNumber1 + convartInputNumber2 + convartInputNumber3;
+        setInnerText('total-cost', totalCostes);
+        
     }
+    inputId2.value = "";
+    inputId3.value = "";
     
 });
