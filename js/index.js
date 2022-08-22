@@ -64,8 +64,10 @@ document.getElementById('calculate').addEventListener('click', function(){
     const countChild = parentNodeId.childNodes;
     const childNumber = countChild.length - 1;
 
-    if(childNumber <= 0 || getValue === ""){
+    if(childNumber <= 0){
         alert("Select Your favorite player. Then calculate the total money");
+    }else if(getValue === ""){
+        alert("Type Money");
     }else{
         const convartNumber = parseFloat(getValue);
         const moneyTotalPlayer = convartNumber * childNumber;
