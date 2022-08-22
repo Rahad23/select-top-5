@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./style.css">
+    <title>My club</title>
+    <link rel="icon" href="./img/Paris_Saint-Germain_F.C..svg.png">
+</head>
+<body class="vh-100">
+    <section class="p-3" style="background-color: #001a1f;">
+        <div >
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="mt-2">
+                            <img class="img-responsive container-fluid" src="./img/Mask Group.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-center align-content-center">
+                        <div class="text-section text-center mt-4">
+                            <h1 class="text-white mt-5" style="font-size: 50px; font-weight: 700;"><i>Select your favorite Players</i></h1>
+                            <p class="text-white mt-2">Paris Saint-Germain Foundation develops educational and sports programs in France and abroad, which use sport and its values as a lever for learning, self-development and solidarity.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <img class="img-responsive container-fluid" src="./img/Paris_Saint-Germain_F.C..svg.png" alt="" style="margin-top: 30px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main style="margin-top: 150px;">
+        <div class="container">
+            <div class="row">
+                <div class="mb-5"> 
+                    <h2 class="text-center" style="font-weight: 700; color: #000;">Players list</h2>
+                </div>
+                <div class="col-lg-3 mb-3 d-flex justify-content-center">
+                    <div class="card bg-dark" style="width: 15rem; height: 340px;">
+                        <img src="./img/Rectangle 144.png" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <h3 id="player-1" class="card-title text-white" style="font-weight: 700;">Lionel Messi</h3>
+                          <p class="card-text" style="color: rgb(180, 172, 172);">36 Goals . 120 Assist</p>
+                          <button id="submit1" class="btn btn-primary">SELECT</button>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-3 mb-3 d-flex justify-content-center">
+                    <div class="card bg-dark" style="width: 15rem; height: 340px;">
+                        <img src="./img/Rectangle 144 (1).png" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <h3 id="player-2" class="card-title text-white" style="font-weight: 700;">Neymar Jr</h3>
+                          <p class="card-text" style="color: rgb(180, 172, 172);">46 Goals . 100 Assist</p>
+                          <button id="submit2" class="btn btn-primary">SELECT</button>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-3 mb-3 d-flex justify-content-center">
+                    <div class="card bg-dark" style="width: 15rem; height: 340px;">
+                        <img src="./img/Rectangle 144 (2).png" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <h3 id="player-3" class="card-title text-white" style="font-weight: 700;">Kylian Mbappé</h3>
+                          <p class="card-text" style="color: rgb(180, 172, 172);">50 Goals . 150 Assist</p>
+                          <button id="submit3" class="btn btn-primary">SELECT</button>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-3 mb-3 d-flex justify-content-center">
+                    <div class="card bg-dark p-3" style="width: 17rem;">
+                        <div>
+                            <h2 class="text-white text-center">Selected-V</h2>
+                            <hr class="text-white mt-0">
+                            <div>
+                                <ul>
+                                    <ol id="setInnerHtml">
+                                        
+                                    </ol>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 mb-3 d-flex justify-content-center">
+                        <div class="card bg-dark" style="width: 15rem; height: 340px;">
+                            <img src="./img/Rectangle 144 (3).png" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                              <h3 id="player-4" class="card-title text-white" style="font-weight: 700;">Vítor Machado</h3>
+                              <p class="card-text" style="color: rgb(180, 172, 172);">20 Goals . 80 Assist</p>
+                              <button id="submit4" class="btn btn-primary">SELECT</button>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-lg-3 mb-3 d-flex justify-content-center">
+                        <div class="card bg-dark" style="width: 15rem; height: 340px;">
+                            <img src="./img/Rectangle 144 (4).png" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                              <h3 id="player-5" class="card-title text-white" style="font-weight: 700;">Sergio Ramos</h3>
+                              <p class="card-text" style="color: rgb(180, 172, 172);">25 Goals . 60 Assist</p>
+                              <button id="submit5" href="#" class="btn btn-primary">SELECT</button>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-lg-3 mb-3 d-flex justify-content-center">
+                        <div class="card bg-dark" style="width: 15rem; height: 340px;">
+                            <img src="./img/Rectangle 144 (5).png" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                              <h3 id="player-6" class="card-title text-white" style="font-weight: 700;">Renato Sanches</h3>
+                              <p class="card-text" style="color: rgb(180, 172, 172);">36 Goals . 120 Assist</p>
+                              <button id="submit6" class="btn btn-primary">SELECT</button>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-lg-3 mb-3 d-flex justify-content-center">
+                        <div class="card bg-dark p-3" style="width: 17rem;">
+                            <div>
+                                <h2 class="text-white text-center">Budget</h2>
+                                <hr class="text-white mt-0">
+                                <div class="d-flex align-items-center">
+                                   <p class="text-white mt-3">Per Player: </p>
+                                   <input id="input1" type="text" class="form-control w-50 h-50" style="margin-left: 8px;"></input>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <button id="calculate" class="btn btn-primary">Calculate</button>
+                                </div>
+                                <p class="text-white mt-3">Player Expenses: $<span id="player-total">0</span></p>
+                                <div class="d-flex align-items-center">
+                                    <p class="text-white mt-3">Manager: </p>
+                                    <input id="input2" type="text" class="form-control w-50 h-50" style="margin-left: 8px;"></input>
+                                 </div>
+                                 <div class="d-flex align-items-center mt-0">
+                                    <p class="text-white mt-3">Coach: </p>
+                                    <input id="input3" type="text" class="form-control w-50 h-50" style="margin-left: 26px;"></input>
+                                 </div>
+                                 <div class="text-center mt-3">
+                                    <button id="calculate-total" class="btn btn-primary">Calculate Total</button>
+                                </div>
+                                <p class="text-white mt-4 mb-5">Total: <span style="margin-left: 50px;"><span>$</span>0</span></p>
+                            </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 150px;">
+        <div class="container">
+                <hr>
+            <div class="text-footer mt-4">
+                <h5 class="text-center">design by: <span style="color: rgb(146, 28, 7);"><i>Rahad Hasan</i></span></h5>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+       
+    </script>
+
+    <!-- js connect -->
+    <script src="./js/index.js"></script>
+    <!-- Bootstrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
