@@ -140,22 +140,24 @@ document.getElementById('calculate').addEventListener('click', function(){
 // Calculate total amount
 document.getElementById('calculate-total').addEventListener('click', function(){
 
-    const inputId1 = document.getElementById('input1');
-    const getValue = inputId1.value;
-    
+    const inputId2 = document.getElementById('input2');
+    const inputId3 = document.getElementById('input3');
+    const getValueInput2 = inputId2.value;
+    const getValueInput3 = inputId3.value;
     // get child html
     const parentNodeId = document.getElementById('setInnerHtml');
     const countChild = parentNodeId.childNodes;
     const childNumber = countChild.length - 1;
 
-    if(childNumber <= 0 || getValue === ""){
+    if(childNumber <= 0 || getValueInput2 === "" || getValueInput3 === ""){
         alert("Select Your favorite player. Then calculate the total money");
     }else{
-        const convartNumber = parseFloat(getValue);
-        const moneyTotalPlayer = convartNumber * childNumber;
+        const convartInputNumber2 = parseFloat(getValueInput2);
+        const convartInputNumber3 = parseFloat(getValueInput3);
+        const totalMoney = convartNumber * childNumber;
         setInnerText('player-total', moneyTotalPlayer)
         console.log(moneyTotalPlayer);
-        test.value = "";
+        inputId2.value = "";
     }
     
 });
